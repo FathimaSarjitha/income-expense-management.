@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>My Budget App</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <p id="error_msg"></p>
+      <div class="title">
+        <h1 class="title">
+          My Budget 
+        </h1>
+      </div>
+
+      <main>
+      <header>
+        <div>
+          <h2>Total Balance</h2>
+          <span id="balance">$0.00</span>
+        </div>
+        <div>
+          <h3>Income</h3>
+          <span id="income">$0.00</span>
+        </div>
+        <div>
+          <h4>Expense</h4>
+          <span id="expense">$0.00</span>
+        </div>
+      </header>
+
+      <section>
+        <h5>Income & Expense History</h5>
+        <ul id="transactionList"></ul>
+        <div id="status"></div>
+      </section>
+
+      <section>
+        <h6>Add Transaction</h6>
+
+        <form id="transactionForm">
+          <div>
+            <label for="type">
+              <input type="checkbox" name="type" id="type" />
+              <div class="option">
+  
+                <span>Income</span>
+                <span>Expense</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div>
+            <label for="amount">Amount</label>
+            <input
+              type="number"
+              name="amount"
+              value="0"
+              min="0.01"
+              step="0.01"
+              required
+            />
+          </div>
+          <div>
+            <label for="date">Date</label>
+            <input type="date" name="date" required />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

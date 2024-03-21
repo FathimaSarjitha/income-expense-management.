@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Welcome to My Website</h1>
+  
+    <!-- Sign In Form -->
+    <h2>Sign In</h2>
+    <form id="signInForm">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>        
+        <button type="submit">Sign In</button>
+
+        <h3>You Haven't an account?</h3> 
+        
+        <div class="SignUnForm-link">
+             <a href="Signup.html">Sign Up</a>
+        </div>
+    
+    </form>
+
+
+<script> 
+
+    document.addEventListener('DOMContentLoaded', function () {
+    // Sign In Form
+    const signInForm = document.getElementById('signInForm');
+    signInForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+        const email = signInForm.email.value;
+        const password = signInForm.password.value;
+        // Perform validation, authentication, and redirection as needed
+        // Example:
+        console.log("Sign in with email:", email, " and password:", password);
+        
+        // Redirect to index.html after successful sign-in
+        window.location.href = "income-expense management.html";
+    });
+
+    // Other code...
+});
+
+
+</script>
+
+</body>
+</html>
